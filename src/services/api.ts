@@ -6,7 +6,7 @@ export const api = {
   buscarLinks: async (): Promise<Link[]> => {
     const response = await fetch(`${API_URL}/links`);
     const data = await response.json();
-    return data;
+    return data.message;
   },
 
   encurtarLink: async (urlOriginal: string): Promise<Link> => {
